@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='style.css') }}">
+    <!--<link rel="stylesheet" href="css/style.css">-->
+    <link rel="html" href="index.html">
+    <title>Fertilizers</title>
+    <style>
+    html {
+      font-family: sans-serif;
+    }
+
+    table {
+      border-collapse: collapse;
+      border: 1px solid black;
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+      margin: auto;
+      margin-top: 20px;
+    }
+
+    td, th {
+      border: 0.5px solid black;
+      padding: 10px 20px;
+    }
+
+    td {
+      text-align: center;
+    }
+
+    caption {
+      padding: 10px;
+    }
+    </style>
+  </head>
+  <body>
+    <h1 class="text-center">Fertilizers</h1>
+
+    <table>
+        <colgroup>
+            <col style="background-color: #61AB97;">
+            <col style="background-color:#F6F6E9;">
+            <col style="background-color: #61AB97;">
+            <col style="background-color:#F6F6E9;">
+            <col style="background-color: #61AB97;">
+            
+        </colgroup>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Formula</th>
+      </tr>
+      {% for item in items %}
+			<tr>
+				<td>{{ item[0] }}</td>
+				<td>{{ item[1] }}</td>
+                <td>{{ item[2] }}</td>
+                <td>{{ item[3] }}</td>
+                <td>{{ item[4] }}</td>				
+			</tr>
+			{% endfor %}
+    </table>
+  </body>
+</html>

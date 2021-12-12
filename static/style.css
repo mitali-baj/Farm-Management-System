@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+   margin: 0;
+   padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+.logo{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 33%;
+    border: 3px solid black;
+    border-radius: 50px;
+
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+}
+
+.nav-list{
+     width: 50%;
+     display: flex;
+     align-items: center;
+}
+
+.nav-list li{
+     List-style: none;
+     padding: 26px 30px;
+}
+
+
+.nav-list li a{
+     text-decoration: none;
+     color: white;
+     font-family: 'Roboto', sans-serif;
+     font-size: 20px;
+}
+
+.nav-list li a:hover{
+    color: rgb(248, 241, 179);
+}
+
+.rightNav{
+    width: 50%;
+    text-align: right;
+    padding: 0 23px;
+}
+
+#search{
+    padding: 5px;
+    font-size: 17px;
+    border: 2px solid grey;
+    border-radius: 9px;
+}
+
+.background{
+    background: rgba(0, 0, 0, 0.7) url('http://localhost/static/bg.jpg');
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.firstSection{
+    height: 100vh;
+}
+
+.box-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 50%;
+    margin: auto;
+    height: 80%;
+}
+
+.firstHalf{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.secondHalf{
+   width: 30%;
+
+}
+
+.secondHalf img{
+    width: 70%;
+    border: 4px solid black;
+    border-radius: 150px;
+    display: block;
+    margin: auto;
+ 
+ }
+
+ .text-big{
+      font-size: 41px;
+ }
+
+ .text-small{
+      font-size: 18px;
+ }
+
+ .btn-sm{
+    background: none;
+    color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 6px 10px;
+    margin: 7px 3px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.btn-dark{
+   color: black;
+   border: 2px solid grey;
+   font-family: 'Roboto', sans-serif;
+}
+
+.section{
+    height: 400px;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 80%;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 50px;
+}
+
+.section1{
+    height: 400px;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 80%;
+    margin-bottom: 50px;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.section-left{
+    flex-direction: row-reverse;
+}
+
+.paras{
+    padding: 0px 65px;
+}
+
+.sectionTag{
+     padding: 16px 0;
+}
+
+.sectionSubTag{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.thumbnail img{
+     width: 300px;
+     border: 2px solid black;
+     border-radius: 200px;
+     margin-top: 140px;
+}
+
+.sectionTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 50%;
+    height: 80%;
+    font-size: 41px;
+    margin-left: 250px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.askaquestion{
+    background-color: rgb(248, 234, 213);
+    height: 1000px;
+
+}
+
+.text-center{
+    text-align: center;
+    padding-top: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+}
+
+.form{
+    max-width: 1200px;
+    margin: 42px auto;
+
+}
+
+.form-input{
+    width: 100%;
+    font-size: 19px;
+    border: 2px solid grey;
+    border-radius: 6px;
+    margin: 14px 0;
+    padding: 5px 3px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text-footer{
+    text-align: center;
+    padding: 30px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropbtn {
+    background: none;
+    color: white;
+    cursor: pointer;
+    vertical-align: middle;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  

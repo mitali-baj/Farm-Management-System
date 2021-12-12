@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='style.css') }}">
+    <!--<link rel="stylesheet" href="style.css">-->
+    <title>Integrated crop management</title>
+</head>
+<body>
+    <nav class="navbar background">
+        <ul class="nav-list">
+            <div class="logo"><!--<img src="http://localhost/static/logo.jpg" alt="logo">--></div>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#ourteam">Our Team</a></li>
+            <div class="dropdown">
+            <div class="dropbtn">Services</div>
+            <div class="dropdown-content">
+            <a href="http://localhost/app?doAction=showfertilizers">Fertilizers</a>
+            <a href="http://localhost/app?doAction=showpesticides">Pesticides</a>
+            <a href="http://localhost/app?doAction=showtools">Tools</a>
+            <a href="http://localhost/app?doAction=showpolicies">Crop Policies</a>
+            </div>  
+            </div>
+            <li><a href="#askaquestion">Ask a question</a></li>
+            <li><a href="http://localhost/app?doAction=showquestions">Previously asked questions</a></li>
+        </ul>
+        <div class="rightNav">
+        <input type="text" name= "search" id="search">
+        <button class="btn btn-sm">Search</button>
+        </div>
+    </nav>
+
+    <section class="background firstSection">
+        <div class="box-main">
+            <div class="firstHalf">
+                <p class="text-big">Agriculture is the most healthy and the most noble employment of a man</p>
+                <p class="text-small">-George Washington</p>
+                            
+            </div>
+
+            <div class="secondHalf">
+                  <img src="http://localhost/static/logo.jpg" alt="logo image">    
+            </div>
+        </div>
+    </section>
+
+    <section class="section1" id="about">
+        <div class="paras">
+        <p class="sectionTag text-big">About us</p>
+        <p class="sectionSubTag text-small">Our website connects farmers with agriculture experts who can mentor and solve problems of marginal farmers and their farm. This system also enables farmers and agronomists to view lists of fertilizers, pesticides, tools and government policies relating to farming. Farmers may ask questions related to their crops, use of fertilizers, pesticides and tools. Questions may include their crop name, problem description and question image. Farmers can also view their as well as other previously asked questions, and their respective answers. </p>
+        </div>
+        <div class="thumbnail">
+            <img src="https://media.istockphoto.com/photos/mid-adult-farmer-inspects-his-land-picture-id1264516942?b=1&k=20&m=1264516942&s=170667a&w=0&h=l1DHL6KR_mGqev51GeZcyniD6LsuFLY6hPJSYM5zasQ=" alt="laptop image" class="imgFluid">
+        </div>
+    </section>
+
+    <section class="section" id="ourteam">
+        <div class="paras">
+        <p class="sectionTitle"> Our Team </p>
+        <p class="sectionTag text-big">Jane Austen</p>
+        <p class="sectionSubTag text-small">Agronomist
+            Conducted insecticide resistance monitoring and entomology surveys especially before and after outdoor residue spraying done for pest control.<br>
+            Monitored farmers on the application of fertilizers and pesticides<br>
+            Prepared, reviewed and implemented environmental health related plans (e.g. Integrated Pest Management Plan)<br>
+            Planned and carried out breeding studies at experiment stations or farms to develop and improve varieties of field crops such as cotton.<br>
+            Examined results of breeding studies to discover and enhance characteristics such as yield, quality, adaptation to specific soils or climates, and resistance to diseases and pests.<br></p></div>
+        <div class="thumbnail">
+          <img src="http://localhost/static/agronomist1.jpg" alt="agronomist 1" class="imgFluid">  
+        </div>   
+    </section>
+
+    <section class="section section-left">
+        <div class="paras">
+        <p class="sectionTag text-big">Jacob Grey</p>
+        <p class="sectionSubTag text-small">Supervised and managed crops (lettuce, cabbage, peppers, celery, etc.) protection department of the company.<br>
+            Formulated various fertilizer and chemical blends, managed chemical storage units.<br>
+            Conducted numerous chemical and physiological research experiments on many plants in fields and greenhouses.<br>
+            Implemented Good Manufacturing (GMP) and Good Agricultural Practices (GAP).<br>
+            Trained associates and field workers on safety, and proper handling of various chemicals. </p></div>
+        <div class="thumbnail">
+          <img src="http://localhost/static/agronomist2.jpg" alt="agronomist 2" class="imgFluid">  
+        </div>   
+    </section>
+
+    <section class="section">
+        <div class="paras">
+        <p class="sectionTag text-big">Samuel Colt</p>
+        <p class="sectionSubTag text-small">Implemented agronomy practices in all research center (site selection, grounds work, planting, irrigation, fertilizer, pruning, weed control, pest and disease control)<br>
+            Coordinated breeder seed production trials<br>
+            Developed seed germination test under laboratory and natural conditions<br>
+            Established seedbed and plant multiplication (from seeds and hard cuttings)</p></div>
+        <div class="thumbnail">
+          <img src="http://localhost/static/agronomist3.jpg" alt="agronomist 3" class="imgFluid">  
+        </div>   
+    </section>
+    <section class="askaquestion" id="askaquestion">
+       <h1 class="text-center">Ask a question</h1>
+       <div class="form">
+            <form action = "http://localhost/app?doAction=saveQuestion" enctype="multipart/form-data" method="post">  
+                <input class="form-input" type="text" name="fullname" id="fullname" placeholder="Enter your full name" >
+                <input class="form-input" type="text" name="phone" id="phone" placeholder="Enter your contact number" >
+                <input class="form-input" type="text" name="cropname" id="cropname" placeholder="Enter the crop name">
+                <input class="form-input" type="email" name="email" id="email" placeholder="Enter your email id">
+                    <textarea class="form-input" name="questionText" id="questionText" cols="30" rows="10" placeholder="Elaborate your concern"></textarea>
+                <input class="form-input" type="file" name="image" id="image" placeholder="upload the picture">
+                <!--<submit class="btn-sm btn-dark">Submit</submit>-->
+                <input type = "submit" value="Upload">  
+            </form>
+       </div>
+    </section>
+</body>
+</html>
+
+
+
+
